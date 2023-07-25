@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    vertical-align: bottom;
+    max-width: 100%;/* 幅からはみ出なくなる */
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* レイアウト部分 */
+
+.main-visual{
+    width: 50%;
+    height: 100vh;
+    position: sticky;/* containerの終わりまで固定 */
+    top: 0;
+    left: 0;
+}
+.main-visual>img{
+    object-fit: cover;
+    object-position: 60% 75%; 
+    width: 100%;
+    height: 100%;
+}
+.contents{
+    width: 50%;
+    /* padding: 150px 15px; */
+    padding: 0 20px;
+}
+.container{
+    display: flex;
+}
+
+header{
+    width: 100%;
+    height: calc(100vh - 80px);
+    /* headerとnavで画面いっぱいにするためにnav分引いた値にする */
+    padding-top: 200px;
+}
+/* main end */
+
+header h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+header p{
+    padding: 0 30px;
+    text-align: center;
+}
+/* header end */
+
+.local-nav{
+    width: 100%;
+    height: 80px;
+    position: sticky;/* 上まできたら固定させる */
+    top: 0;
+    background-color: rgba(255,255,255,.8);
+    margin-bottom: 100px;
+    backdrop-filter: blur(10px);/* 下の要素がボケて見える */
+}
+.local-nav ul{
+    display: flex;
+    height: 80px;
+    align-items: center;/* 縦方向中央揃え　heightとセット */
+    justify-content: space-between;
+}
+.local-nav li a{
+    display: block;
+    padding: 0 40px;
+    color: #000000;
+}
+.local-nav li a:hover{
+    text-decoration: underline 3px #cde5ec;/* hoverしたときに下線を出す */
+    text-underline-offset: 5px;
+}
+/* nav end */
+
+
+
+
+
+
+.thumb{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.thumb li{
+    width: calc((100% - 40px) / 2);
+    aspect-ratio: 1 / 1;/* 幅/高さ　比率の固定 */
+}
+.thumb img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+section{
+    margin-bottom: 200px;
+    scroll-margin-top: 100px;/* スクロールでnavとh2が被らないようにする */
+}
+
+section h2{
+    font-size: 25px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+.city-img{
+    margin-bottom: 30px;
+}
+
+section p{
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: #c5b4d4;
+}
+
+@media (max-width:960px){
+.container{
+display: block;
+}
+.main-visual{
+    position: static;
+    width: 100%;
+    height: 60vh;
+}
+
+.contents{
+    width: 100%;
+}
+
+header{
+    height: 200px;
+    /* height: calc(100vh - 80px); */
+    /* headerとnavで画面いっぱいにするためにnav分引いた値にする */
+    padding-top: 30px;
+}
+/* header responsive end */
+
+.local-nav{
+    width: 100%;
+    height: 80px;
+    position: static;/* 上まできたら固定を初期化 */
+    margin-bottom: 60px;
+    backdrop-filter: none;
+}
+.local-nav ul{
+    height: 70px;
+}
+.local-nav li a{
+    display: block;
+    padding: 0 20px;
+    color: #000000;
+}
+
+section{
+    margin-bottom: 100px;
+    scroll-margin-top: 0;/* スクロールでnavとh2が被らないようにする */
+}
+
+
+}

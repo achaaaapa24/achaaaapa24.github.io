@@ -1,0 +1,159 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Opti&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    vertical-align: bottom;/* 画像下の余白リセット */
+}
+/* riset css */
+
+/* 共通部分 */
+header{
+    padding: 30px 0px;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Kaisei Opti', serif;
+    font-size: 43px;
+}
+
+.g-nav{
+    width: 100%;
+    height: 50px;
+    background-color: #261E47;
+    margin-bottom: 80px;
+}
+
+.g-nav>ul{
+    display: flex;
+    width: 960px;/* 画像と同じ幅にする */
+    margin: 0 auto;/* ボタンを中央に集める */
+}
+
+.g-nav li{
+    width: 20%;/* 均等の場合は％使う */
+}
+
+.g-nav a{
+    display: block;
+    line-height: 50px;/* 文字を垂直方向に揃える　heightと同じ値 */
+    color: #fff;
+    text-align: center;
+    border-right: 1px solid #ffffff;/* 右側に線 */
+
+}
+
+.g-nav a:hover{
+    background-color: #3c3653;
+}
+
+/* :first-of-type 一番初めの要素に命令 */
+.g-nav li:first-of-type>a{
+    border-left: 1px solid #ffffff;/* トップの左側に線 */
+}
+
+main{
+    width: 960px;
+    margin: 0 auto 100px;
+}
+
+footer{
+    width: 100%;/* 画面いっぱいに表示 */
+    height: 100px;
+    background-color: #261E47;
+}
+
+footer>p{
+    color: #fff;
+    text-align: center;
+    line-height: 100px;/* footerのheight値 */
+}
+
+/* トップページ部分 */
+.main-visual{
+    margin-bottom: 80px;
+}
+
+.main-txt{
+    text-align: center;
+}
+
+.main-txt h2{
+    margin-bottom: 20px;
+}
+
+.main-txt p{
+    width: 600px;
+    margin: 0 auto;
+    line-height: 2.5;
+}
+
+/* 季節ページ部分 */
+main.page{
+    display: flex;/* 横並び */
+}
+
+main .page-img{
+    margin-right: 60px;
+}
+
+.page-txt>h2{
+    margin-bottom: 20px;
+}
+
+.page-txt>p{
+    line-height: 1.9;
+}
+
+/* 個別ページ */
+
+/* idは# footerも一緒なのでまとめる */
+#spring>.g-nav,#spring>footer{
+    background-color: #EB7A77;
+}
+
+#spring>.g-nav a:hover{
+    background-color: #b65956;
+}
+
+#summer>.g-nav,#summer>footer{
+    background-color: #00AA90;
+}
+
+#summer>.g-nav a:hover{
+    background-color: #066e5f;
+}
+
+#fall>.g-nav,#fall>footer{
+    background-color: #F05E1C;
+}
+
+#fall>.g-nav a:hover{
+    background-color: #a84212;
+}
+
+#winter>.g-nav,#winter>footer{
+    background-color: #6E75A4;
+}
+
+#winter>.g-nav a:hover{
+    background-color: #454a69;
+}
+
+#winter .page-txt>p{
+    line-height: 1.7;
+}

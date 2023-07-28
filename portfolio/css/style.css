@@ -285,7 +285,7 @@ h2{
     height: 110vh;
     display: flex;
     padding-top: 120px;
-    /* margin-bottom: px; */
+    margin-bottom: 55px;
     /* border: 1px solid #8d6161; */
 }
 
@@ -293,7 +293,7 @@ h2{
     margin: 0 auto;
     max-width: 1200px;
     height: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .about_box{
@@ -354,6 +354,8 @@ h2{
     height: auto;
     border-radius: 0 40px 0 40px;
 }
+
+
 /* end about */
 
 #skills{
